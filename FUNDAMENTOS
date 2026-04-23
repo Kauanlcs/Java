@@ -42,7 +42,6 @@ public class Retangulogululrnonl {
 
     public static void main(String[] args) {
 
-        // Cria o Scanner para ler dados
         Scanner sc = new Scanner(System.in);
 
         // Pedir a base do retângulo
@@ -61,7 +60,6 @@ public class Retangulogululrnonl {
         // Fórmula: área = base × altura
         double area = base * altura;
 
-        // Mostrar o resultado
         System.out.println("A área do retângulo é: " + area);
 
 
