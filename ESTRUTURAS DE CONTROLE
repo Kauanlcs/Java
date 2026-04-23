@@ -1,31 +1,18 @@
 ATIVIDADE 5
 import java.util.Scanner;
 
-// Cria a classe chamada tabuadadalenonl.
-// Todo programa Java precisa estar dentro de uma classe.
 public class Ex01Tabuada {
 
 
-    // A execução do programa sempre começa aqui.
     public static void main(String[] args) {
 
-        // Cria um objeto Scanner chamado "sc".
-        // Esse objeto será usado para ler dados do teclado.
         Scanner sc = new Scanner(System.in);
 
-        // Mostra uma mensagem pedindo que o usuário digite um número.
         System.out.print("Digite um número: ");
 
-        // Lê o número inteiro digitado pelo usuário.
-        // O valor será armazenado na variável chamada "numero".
         int numero = sc.nextInt();
 
         // Estrutura de repetição FOR.
-        // Ela é usada quando sabemos quantas vezes queremos repetir algo.
-        //
-        // int i = 1  → cria a variável de controle começando em 1
-        // i <= 10    → o laço continua enquanto i for menor ou igual a 10
-        // i++        → a cada repetição i aumenta +1
         for (int i = 1; i <= 10; i++) {
 
             // Aqui o programa mostra cada linha da tabuada.
@@ -46,7 +33,6 @@ public class Ex01Tabuada {
 
 
 ATIVIDADE 6
-// Importar a classe Scanner para ler dados digitados no teclado
 import java.util.Scanner;
 
 public class imcleninl {
@@ -55,11 +41,8 @@ public class imcleninl {
 
         Scanner sc = new Scanner(System.in);
 
-        // Mostra uma mensagem pedindo a altura
         System.out.print("Digite sua altura: ");
 
-        // Lê o número decimal digitado
-        // Usamos double porque altura pode ser decimal (ex: 1.75)
         double altura = sc.nextDouble();
 
         // Pede o peso da pessoa
@@ -72,11 +55,7 @@ public class imcleninl {
         // IMC = peso / (altura × altura)
         double imc = peso / (altura * altura);
 
-        // Mostra o valor calculado
         System.out.println("Seu IMC é: " + imc);
-
-        // Agora começa a classificação do IMC.
-        // O programa verifica em qual faixa o valor está.
 
         // Se o IMC for menor ou igual a 18.5
         if (imc <= 18.5) {
@@ -187,10 +166,6 @@ public class DivisaoControladinlenhon {
         int primeiro = sc.nextInt();
 
         int numero;
-
-        // Estrutura de repetição DO-WHILE
-        // O DO executa primeiro e só depois verifica a condição
-        do {
 
             // Pede outro número ao usuário
             System.out.print("Digite outro número: ");
