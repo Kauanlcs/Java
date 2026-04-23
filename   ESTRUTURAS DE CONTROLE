@@ -1,0 +1,209 @@
+import java.util.Scanner;
+
+// Cria a classe chamada tabuadadalenonl.
+// Todo programa Java precisa estar dentro de uma classe.
+public class Ex01Tabuada {
+
+
+    // A execução do programa sempre começa aqui.
+    public static void main(String[] args) {
+
+        // Cria um objeto Scanner chamado "sc".
+        // Esse objeto será usado para ler dados do teclado.
+        Scanner sc = new Scanner(System.in);
+
+        // Mostra uma mensagem pedindo que o usuário digite um número.
+        System.out.print("Digite um número: ");
+
+        // Lê o número inteiro digitado pelo usuário.
+        // O valor será armazenado na variável chamada "numero".
+        int numero = sc.nextInt();
+
+        // Estrutura de repetição FOR.
+        // Ela é usada quando sabemos quantas vezes queremos repetir algo.
+        //
+        // int i = 1  → cria a variável de controle começando em 1
+        // i <= 10    → o laço continua enquanto i for menor ou igual a 10
+        // i++        → a cada repetição i aumenta +1
+        for (int i = 1; i <= 10; i++) {
+
+            // Aqui o programa mostra cada linha da tabuada.
+            // Exemplo se numero = 5:
+            // 5 x 1 = 5
+            // 5 x 2 = 10
+            // etc.
+
+            // numero * i faz a multiplicação da tabuada.
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+
+        }
+
+        sc.close();
+    }
+}
+
+
+
+ATIVIDADE 6
+// Importar a classe Scanner para ler dados digitados no teclado
+import java.util.Scanner;
+
+public class imcleninl {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Mostra uma mensagem pedindo a altura
+        System.out.print("Digite sua altura: ");
+
+        // Lê o número decimal digitado
+        // Usamos double porque altura pode ser decimal (ex: 1.75)
+        double altura = sc.nextDouble();
+
+        // Pede o peso da pessoa
+        System.out.print("Digite seu peso: ");
+
+        // Lê o peso digitado
+        double peso = sc.nextDouble();
+
+        // Calcula o IMC usando a fórmula
+        // IMC = peso / (altura × altura)
+        double imc = peso / (altura * altura);
+
+        // Mostra o valor calculado
+        System.out.println("Seu IMC é: " + imc);
+
+        // Agora começa a classificação do IMC.
+        // O programa verifica em qual faixa o valor está.
+
+        // Se o IMC for menor ou igual a 18.5
+        if (imc <= 18.5) {
+
+            System.out.println("Abaixo do peso");
+
+        // Se for maior que 18.5 mas menor ou igual a 24.9
+        } else if (imc <= 24.9) {
+
+            System.out.println("Peso ideal");
+
+        // Se estiver até 29.9
+        } else if (imc <= 29.9) {
+
+            System.out.println("Levemente acima do peso");
+
+        // Se estiver até 34.9
+        } else if (imc <= 34.9) {
+
+            System.out.println("Obesidade Grau I");
+
+        // Se estiver até 39.9
+        } else if (imc <= 39.9) {
+
+            System.out.println("Obesidade Grau II");
+
+        // Qualquer valor acima disso
+        } else {
+
+            System.out.println("Obesidade Grau III");
+
+        }
+
+        sc.close();
+    }
+}
+
+
+ATIVIDADE 7
+import java.util.Scanner;
+
+public class IntervalinhParImparlenosnl {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Pedir o primeiro número do intervalo
+        System.out.print("Digite o primeiro número: ");
+
+        // Lê o número digitado
+        int n1 = sc.nextInt();
+
+        // Pedir o segundo número do intervalo
+        System.out.print("Digite o segundo número: ");
+
+        // Lê o número digitado
+        int n2 = sc.nextInt();
+
+        // Pergunta ao usuário se ele quer números pares ou ímpares
+        System.out.print("Digite 1 para PAR ou 2 para ÍMPAR: ");
+
+        // Guarda a escolha do usuário
+        int opcao = sc.nextInt();
+
+        // Estrutura de repetição FOR
+        // O programa vai percorrer todos os números do intervalo
+        // começando do segundo número até chegar no primeiro
+        for (int i = n2; i >= n1; i--) {
+
+            // Verifica se o usuário escolheu mostrar números pares
+            // i % 2 == 0 significa que o número é par
+            if (opcao == 1 && i % 2 == 0) {
+
+                System.out.println(i);
+
+            }
+
+            // Verifica se o usuário escolheu mostrar números ímpares
+            // i % 2 != 0 significa que o número é ímpar
+            if (opcao == 2 && i % 2 != 0) {
+
+                System.out.println(i);
+
+            }
+
+        }
+
+        sc.close();
+    }
+}
+
+
+
+ATIVIDADE 8
+import java.util.Scanner;
+
+public class DivisaoControladinlenhon {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Pedir o número inicial
+        System.out.print("Digite o número inicial: ");
+
+        // Lê o número digitado
+        int primeiro = sc.nextInt();
+
+        int numero;
+
+        // Estrutura de repetição DO-WHILE
+        // O DO executa primeiro e só depois verifica a condição
+        do {
+
+            // Pede outro número ao usuário
+            System.out.print("Digite outro número: ");
+
+            // Lê o número digitado
+            numero = sc.nextInt();
+
+        // Continua repetindo enquanto o resto da divisão for 0
+        // % é o operador de resto da divisão
+        } while (numero % primeiro == 0);
+
+        // Quando a condição não for mais verdadeira o programa sai do loop
+        System.out.println("Número inválido digitado. Encerrando...");
+
+        sc.close();
+    }
+}
