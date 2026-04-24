@@ -12,16 +12,9 @@ public class Ex01Tabuada {
 
         int numero = sc.nextInt();
 
-        // Estrutura de repetição FOR.
+
         for (int i = 1; i <= 10; i++) {
 
-            // Aqui o programa mostra cada linha da tabuada.
-            // Exemplo se numero = 5:
-            // 5 x 1 = 5
-            // 5 x 2 = 10
-            // etc.
-
-            // numero * i faz a multiplicação da tabuada.
             System.out.println(numero + " x " + i + " = " + (numero * i));
 
         }
@@ -45,44 +38,36 @@ public class imcleninl {
 
         double altura = sc.nextDouble();
 
-        // Pede o peso da pessoa
         System.out.print("Digite seu peso: ");
 
-        // Lê o peso digitado
         double peso = sc.nextDouble();
 
-        // Calcula o IMC usando a fórmula
-        // IMC = peso / (altura × altura)
         double imc = peso / (altura * altura);
 
         System.out.println("Seu IMC é: " + imc);
 
-        // Se o IMC for menor ou igual a 18.5
         if (imc <= 18.5) {
 
             System.out.println("Abaixo do peso");
 
-        // Se for maior que 18.5 mas menor ou igual a 24.9
         } else if (imc <= 24.9) {
 
             System.out.println("Peso ideal");
 
-        // Se estiver até 29.9
+     
         } else if (imc <= 29.9) {
 
             System.out.println("Levemente acima do peso");
 
-        // Se estiver até 34.9
         } else if (imc <= 34.9) {
 
             System.out.println("Obesidade Grau I");
 
-        // Se estiver até 39.9
+       
         } else if (imc <= 39.9) {
 
             System.out.println("Obesidade Grau II");
 
-        // Qualquer valor acima disso
         } else {
 
             System.out.println("Obesidade Grau III");
@@ -103,39 +88,26 @@ public class IntervalinhParImparlenosnl {
 
         Scanner sc = new Scanner(System.in);
 
-        // Pedir o primeiro número do intervalo
         System.out.print("Digite o primeiro número: ");
 
-        // Lê o número digitado
         int n1 = sc.nextInt();
 
-        // Pedir o segundo número do intervalo
         System.out.print("Digite o segundo número: ");
 
-        // Lê o número digitado
         int n2 = sc.nextInt();
 
-        // Pergunta ao usuário se ele quer números pares ou ímpares
         System.out.print("Digite 1 para PAR ou 2 para ÍMPAR: ");
 
-        // Guarda a escolha do usuário
         int opcao = sc.nextInt();
 
-        // Estrutura de repetição FOR
-        // O programa vai percorrer todos os números do intervalo
-        // começando do segundo número até chegar no primeiro
         for (int i = n2; i >= n1; i--) {
 
-            // Verifica se o usuário escolheu mostrar números pares
-            // i % 2 == 0 significa que o número é par
             if (opcao == 1 && i % 2 == 0) {
 
                 System.out.println(i);
 
             }
 
-            // Verifica se o usuário escolheu mostrar números ímpares
-            // i % 2 != 0 significa que o número é ímpar
             if (opcao == 2 && i % 2 != 0) {
 
                 System.out.println(i);
@@ -159,25 +131,18 @@ public class DivisaoControladinlenhon {
 
         Scanner sc = new Scanner(System.in);
 
-        // Pedir o número inicial
         System.out.print("Digite o número inicial: ");
 
-        // Lê o número digitado
         int primeiro = sc.nextInt();
 
         int numero;
 
-            // Pede outro número ao usuário
             System.out.print("Digite outro número: ");
 
-            // Lê o número digitado
             numero = sc.nextInt();
 
-        // Continua repetindo enquanto o resto da divisão for 0
-        // % é o operador de resto da divisão
         } while (numero % primeiro == 0);
 
-        // Quando a condição não for mais verdadeira o programa sai do loop
         System.out.println("Número inválido digitado. Encerrando...");
 
         sc.close();
