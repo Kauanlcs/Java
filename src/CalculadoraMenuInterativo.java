@@ -5,22 +5,22 @@ public class CalculadoraMenuInterativo {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
-        double num1, num2, resultado;
+        double num1, num2, resultado, resto;
 
         do {
 
             System.out.println("---------------------------------------");
             System.out.println("🧮CALCULADORA COM MENU INTERATIVO🧮 ");
             System.out.println("-----------------------------------------");
-            System.out.println("1- SOMA");
-            System.out.println("2- SUBTRAÇÃO");
-            System.out.println("3- MULTIPLICAÇÃO");
-            System.out.println("4- DIVISÃO");
-            System.out.println("5- PONTÊNCIA");
-            System.out.println("6- SAIR");
+            System.out.println("1- Soma");
+            System.out.println("2- Subtração");
+            System.out.println("3- Multiplicação");
+            System.out.println("4- Divisão");
+            System.out.println("5- Potência");
+            System.out.println("6- Sair");
             System.out.println("------------------------------------------");
 
-            System.out.println("Escolha uma opção: ");
+            System.out.print("Escolha uma opção: ");
 
             opcao = scanner.nextInt();
 
@@ -66,7 +66,7 @@ public class CalculadoraMenuInterativo {
                             System.out.println("Resultado atual da Subtração: " + resultado);
                             System.out.println("1 - Informar mais números");
                             System.out.println("2 - Sair da operação");
-                            System.out.print("Escolha uma opção: ");
+                            System.out.println("Escolha uma opção: ");
                             subOpcao2 = scanner.nextInt();
                             if(subOpcao2 == 1) {
                                 System.out.print("Digite outro número: ");
@@ -88,8 +88,9 @@ public class CalculadoraMenuInterativo {
                     case 4:
                         if (num2 != 0) {
                             resultado = num1 / num2;
+                       resto = num1 % num2;
                             System.out.println("Resultado da Divisão:" + resultado);
-                            break;
+                            System.out.println("Resto da Divisão: " + resto);
                         } else {
                             System.out.println("Erro seu desavisado: Divisão por zero não é permitida!");
                         }
